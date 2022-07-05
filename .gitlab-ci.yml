@@ -1,0 +1,46 @@
+build: # 必須定義一個名為 pages 的 job
+  image: node:16.14.2
+  stage: build
+  script:
+    - npm install
+    #- npm ci
+    - npm run build
+    - mv public public-vue # GitLab Pages 的鉤子設定在 public 檔案夾
+    - mv dist public # 重命名 dist 檔案夾 (npm run build 之後的輸出位置)
+  artifacts:
+    paths:
+      - public # artifact path 一定要在 /public , 這樣 GitLab Pages 才能獲取
+  tags :
+    - npm
+
+ 
+deploy-backend:
+  stage: deploy
+  only :
+  - backend
+  script:
+    - lftp -u $FTP_account,$FTP_specialpassword 192.168.1.242 -e "lcd /builds/engineering-department-activityzoneteam/22yadmissionsystemdata/public/ ; mirror -e --exclude .git --exclude-glob  --exclude *.md  --exclude-glob *.yml -Revp . manage/staff/event22/22yAdmissionSystem/ ; quit"
+  #when: manual
+  tags :
+  - lftp
+
+deploy-dev:
+  stage: deploy
+  only :
+  - devServer
+  script:
+    - lftp -u $FTP_account,$FTP_password 192.168.1.234 -e "lcd /builds/engineering-department-activityzoneteam/22yadmissionsystemdata/public/ ; mirror -e --exclude .git --exclude index.html --exclude-glob *.md  --exclude-glob *.yml -Revp . event22/22yAdmissionSystem/ ; quit"
+  #when: manual
+  tags :
+  - lftp
+
+
+deploy-prod:
+  stage: deploy
+  only :
+  - main
+  script:
+    - lftp -u $FTP_account,$FTP_password 192.168.8.101 -e "lcd /builds/engineering-department-activityzoneteam/22yadmissionsystemdata/public/ ; mirror -e --exclude .git --exclude index.html --exclude-glob *.md  --exclude-glob *.yml -Rep . event22/22yAdmissionSystem/ ; quit"
+  #when: manual
+  tags :
+  - lftp

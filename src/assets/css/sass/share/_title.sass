@@ -1,0 +1,110 @@
+// 表單區＿＿標題
+.titleBox
+    text-align: center
+    padding: 0 15px
+    h2
+        margin-bottom: 20px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        position: relative
+        font-size: 24px
+        font-weight: $font_weight_700
+        color: $color_blue_dark
+        @include mdScreen
+            font-size: 32px
+        b
+            width: 100%
+            font-size: 36px
+            @include mdScreen
+                font-weight: $font_weight_700
+                font-size: 52px
+        span
+            margin-left: 6px
+            font-size: 24px
+            font-weight: $font_weight_700
+            color: $color_blue_dark
+            @include mdScreen
+                margin-left: 10px
+                font-size: 24px
+            @include mdScreen
+                font-size: 32px
+
+        &::after
+            position: absolute
+            content: ''
+            display: block
+            width: 110px
+            height: 4px
+            background: $color_sys_second
+            bottom: -10px
+            left: 50%
+            transform: translateX(-50%)
+        + p
+            font-size: 18px
+            color: $color_text_gray
+            @include mdScreen
+                font-size: 22px
+            span
+                display: block
+                @include xsScreen
+                    display: inline-block
+    h3
+        padding-top: 10px
+        font-size: 24px
+        font-weight: $font_weight_700
+        color: $color_sys_second
+        @include mdScreen
+            font-size: 32px 
+// 新增系所標題連結,並移除舊有設定
+.title
+    &__id
+        color: $color_red
+        font-weight: $font_weight_700
+        padding-right: 10px
+    &__school
+        font-weight: $font_weight_700
+        color: $color_sys_second
+        padding-right: 10px
+        
+    &__department
+        font-weight: $font_weight_700
+        color: $color_sys_second
+a.title__school
+    &:hover
+        text-decoration: underline
+        color: $color_sys_second
+    
+// 設定
+.title
+    &__default
+        font-size: 18px
+        color: $color_text_gray
+        @include mdScreen
+            font-size: 22px
+        span
+            margin-top: 6px
+            display: inline-block
+    &__search
+        b
+            &:not(:first-child)
+                margin-left: 10px
+                
+    &__txt
+        font-size: 20px
+        color: $color_school_main
+        font-weight: $font_weight_400
+        @include mdScreen
+            font-size: 22px
+    &__result
+        font-size: 20px
+        color: $color_red
+        font-weight: $font_weight_400
+        @include mdScreen
+            font-size: 22px
+    &__number
+        font-size: 24px !important
+        color: $color_red !important
+        font-weight: $font_weight_700
+        @include mdScreen
+            font-size: 32px !important

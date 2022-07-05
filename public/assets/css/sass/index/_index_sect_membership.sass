@@ -1,0 +1,115 @@
+// 會員卡區域 sect_membership
+.sect
+    &_membership
+        margin-top: 80px
+        display: flex
+        justify-content: center
+        
+        .sect
+            &_container
+                padding: 45px 30px
+                @include mdScreen
+                    padding: 50px 30px 
+
+// 卡片設定 membership_card
+.membership
+    &_card
+        position: relative
+        max-width: 450px
+        border-radius: 17px
+        overflow: hidden
+        box-shadow:  0 6px 9px rgba(0, 0, 0, .11)
+        @include media_membership_card_510
+            border-radius: 25px
+        figure
+            img
+                width: 100%
+        // 卡片文字與會員卡號
+        &_content
+            position: absolute
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding: 3vw 4vw 
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 5
+            color: $color_white
+            letter-spacing: 2px
+            @include media_membership_card_510
+                padding: 20px 24px
+            // 黃金卡文字
+            h2
+                padding-top: 7vw
+                font-size: 3vw
+                +card_animation
+                @include media_membership_card_510
+                    padding-top: 50px
+                    font-size: 20px
+                    
+            // 1111 logo 圖片
+            figure
+                img
+                    width: 23%
+                    +card_animation
+                    @include media_membership_card_510
+                        width: 110px
+            // 歡迎詞文字
+            p
+                margin-bottom: 2vw
+                text-align: center
+                font-size: 5vw
+                +card_animation
+                @include media_membership_card_510
+                    font-size: 23px
+                    margin-bottom: 10px
+            // 會員卡號
+            &_sn
+                text-align: right !important
+                font-size: 3vw !important
+                margin-bottom: 0 !important
+                @include media_membership_card_510
+                    font-size: 19px !important
+        &_platinum
+            h2
+                color: $color_dark
+            p
+                color: $color_dark
+            .membership_card_content_sn
+                color: $color_dark
+        + p
+            color: $color_dark !important
+
+
+            
+
+
+        // 未開通遮罩畫面
+        &_mask
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 10
+            figure
+                img
+                    width: 100%
+        // 序號
+        + p
+            margin-top: 10px
+            color: $color_gold
+            font-size: 14px
+            @include mdScreen
+                margin-top: 20px
+                font-size: 18px
+
+
+
+    
+
+
+                
+        

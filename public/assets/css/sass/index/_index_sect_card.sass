@@ -1,0 +1,131 @@
+// 會員卡區域 sect_membership
+.sect
+    &_card
+        margin-bottom: 60px
+        .sect
+            &_container
+                position: relative
+                padding: 60px 20px 10px
+                max-width: 1200px
+                text-align: center
+                border-radius: 17px
+                border: 2px solid #fff
+                background: linear-gradient(180deg, rgba(255, 255, 255, .45) 0%, rgba(255, 255, 255, 0) 100%)
+                backdrop-filter: blur(19px) saturate(150%)
+                +card_animation
+                +container_gradient_shadow
+                @include mdScreen
+                    margin: 0 45px
+                    padding: 70px 20px 10px
+                @include media_sec_container_1290
+                    margin: 0 auto
+                h2
+                    margin-bottom: 20px
+                    font-size: 22px
+                    font-weight: $font_size_700
+                    color: $color_dark
+                    @include mdScreen
+                        margin-bottom: 30px
+        &:not(:last-child)
+            margin-bottom: 20px
+
+            
+// 基礎 card ==> 開卡進度
+.card
+    // card 外觀
+    &_box
+        margin: 0 auto 60px
+        padding: 45px 15px 55px
+        max-width: 450px
+        background: #fff
+        border-radius: 17px
+        box-shadow: 0 9px 46px rgba(0, 0, 0, .03)
+        @include mdScreen
+            margin: 0 auto 70px
+            padding: 50px 15px 60px
+        // card 標題文字
+        &_title
+            display: inline-block
+            margin-bottom: 14px
+            font-size: 26px
+            font-weight: $font_size_400
+            // background: linear-gradient(90deg, #03aff0 0%, #9438cc 100%)
+            +main_gradient
+            -webkit-background-clip: text
+            color: transparent
+        // card 說明文
+        &_text
+            margin-bottom: 16px
+            font-size: 18px
+            color: $color_default_text
+            font-weight: $font_size_300
+            b
+                color: $color_main_blue
+            @include mdScreen
+                margin: 0 30px 20px
+        // 互動按鈕
+        &_btn
+            display: inline-block
+            // 文字 上7px 扣5px  下4px 扣2px 
+            padding: 12px 54px 12px
+            border-radius: 50px
+            color: $color_white
+            font-weight: $font_size_400
+            font-size: 18px
+            +main_gradient
+            +card_animation
+            text-decoration: none
+            &:hover
+                color: $color_white
+                +main_gradient_hover
+                +card_box_btn
+
+                
+// ++繼承 基礎 card + 細節微調  ==> 解鎖黃金卡進度 & 解鎖黃金卡進度
+.card     
+    &_refresh_box,
+    &_step_box
+        padding: 17px 15px 55px
+        @include mdScreen
+            padding: 17px 15px 60px
+        .card
+            // card 標題文字
+            &_box
+                &_title
+                    margin-bottom: 7px
+
+                
+
+// ++繼承 基礎 card + 細節微調  ==>  解鎖黃金卡進度
+.card
+    // 互動按鈕 左右間距調整
+    &_refresh_box
+        .card
+            &_box
+                &_btn
+                    padding: 12px 33px 12px
+    &_step_box
+        padding: 20px 15px 55px
+        @include mdScreen
+            padding: 20px 15px 60px
+        &_group
+            img
+                width: 50px
+        &:not(:last-child)
+            margin-bottom: 20px
+        .card
+            &_box
+                // card 說明文
+                &_text
+                    margin-bottom: 7px
+                    @include mdScreen
+                        margin: 0 10px 21px
+    // 調整沒有按鈕的畫面
+    &_wait_box
+        .card
+            &_box
+                &_text
+                    margin-bottom: 0
+
+
+            

@@ -1,0 +1,113 @@
+.animated
+    &_object
+        position: fixed
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        pointer-events: none
+        background: linear-gradient(215deg, rgba(3, 175, 240, 0.25), rgba(148, 56, 204, 0.25), #fff)
+        background-size: 200% 200% 
+        animation: main_gradient 10s ease infinite
+
+        // overflow: hidden
+    &_circle_num01
+        position: absolute
+        background: linear-gradient(36deg, rgba(3, 175, 240, .5) 0%, rgba(148, 56, 204, .5) 100%)
+        width: 7vw
+        height: 7vw
+        border-radius: 50%
+        top: 30vw
+        left: 4vw
+        +card_animation
+        animation: opacity 5s ease infinite
+        @include xsScreen
+            top: 92vw
+            left: -4vw
+        @include mdScreen
+            top: 60vw
+            left: 2.5vw
+        @include lgScreen
+            top: 30vw
+            left: 2.5vw
+        @include xxlScreen
+            width: 114px
+            height: 114px
+            top: 14vw   
+            left: 10vw
+
+            
+    &_circle_num02
+        position: absolute
+        background: linear-gradient(270deg, rgba(3, 175, 240, .5) 0%, rgba(148, 56, 204, .5) 100%)
+        width: 40vw
+        height: 40vw
+        border-radius: 50%
+        right: -13vw
+        top: 100vw
+        +card_animation
+        animation: opacity 15s ease infinite
+        @include xsScreen
+            top: 95vw
+        @include mdScreen
+            top: -20vw
+            right: -10vw
+        @include lgScreen
+            top: -17vw
+            right: -20vw
+        @include xxlScreen
+            width: 558px
+            height: 558px
+            top: -15vw
+            right: -12vw
+            
+    &_circle_num03
+        position: absolute
+        background: linear-gradient(303deg, rgba(3, 175, 240, .25) 0%, rgba(148, 56, 204, .25) 100%)
+        width: 27vw
+        height: 27vw
+        border-radius: 50%
+        right: 3vw
+        top: 180vw
+        +card_animation
+        animation: opacity 10s ease infinite
+        @include xsScreen
+            top: 170vw
+        @include mdScreen
+            top: 80vw
+            right: -15vw
+        @include lgScreen
+            top: 70vw
+            right: -8vw
+        @include xxlScreen
+            width: 364px
+            height: 364px
+            top: 38vw
+            right: 8vw
+        
+    &_circle_num04
+        position: absolute
+        background: linear-gradient(338deg, rgba(3, 175, 240, .5) 0%, rgba(148, 56, 204, .5) 100%)
+        width: 74vw
+        height: 74vw
+        border-radius: 50%
+        left: -32vw
+        top: 182vw
+        +card_animation
+        animation: opacity 5s ease infinite
+        @include xsScreen
+            top: 170vw
+        @include mdScreen
+            top: 100vw
+        @include lgScreen
+            top: 70vw
+            left: -40vw
+        @include xxlScreen
+            width: 1036px
+            height: 1036px
+            top: 40vw
+            left: -17vw
+
+    
+        
+

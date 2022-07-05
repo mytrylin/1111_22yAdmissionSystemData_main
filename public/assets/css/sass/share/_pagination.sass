@@ -1,0 +1,283 @@
+// 參考bootstrap scss檔案架構
+.page_link
+    position: relative
+    display: block
+    padding: 12px 15px 13px
+    margin: 0 4px
+    line-height: 1.25
+    font-size: 17px
+    color: $color_blue_dark
+    background: $color_paginator
+    text-decoration: none
+    border-radius: 8px
+    outline: none
+    border: none
+    +default_animation
+
+    &:hover
+        z-index: 2
+        color: $color_white
+        text-decoration: none
+        background: $color_sys_main
+
+    &:focus
+        z-index: 3
+        color: $color_white
+        background-color: $color_blue_dark
+
+.page_item
+    // 最前頁 li
+    &:first-child
+
+        .page_link
+
+            &::before
+                content: ''
+                padding-left: 14px
+                background: url('../img/main/icon_arrow_front.svg'),url('../img/main/icon_arrow_front_light.svg') 
+                background-repeat: no-repeat,no-repeat
+                background-position: center,center
+                +default_animation
+
+            &:hover
+                &::before
+                    background: url('../img/main/icon_arrow_front_light.svg') no-repeat center center
+
+            &:focus
+                &::before
+                    background: url('../img/main/icon_arrow_front_light.svg') no-repeat center right
+
+    // 前一頁 li
+    &:nth-child(2)
+
+        .page_link
+            padding: 12px 0 13px
+            background: transparent
+
+            &::before
+                content: ''
+                margin-right: 8px
+                padding-left: 10px
+                background-image: url('../img/main/icon_arrow_prev.svg'),url('../img/main/icon_arrow_prev_light.svg')
+                background-repeat: no-repeat,no-repeat
+                background-position: center,center
+                +default_animation
+
+            &:hover
+                color: $color_sys_main
+                &::before
+                    background: url('../img/main/icon_arrow_prev_light.svg') no-repeat center center 
+
+            &:focus
+                color: $color_blue_dark
+                &::before
+                    background: url('../img/main/icon_arrow_prev.svg') no-repeat center right
+
+    // 後一頁 li
+    &:nth-last-child(3)
+
+        .page_link
+            padding: 12px 0 13px
+            background: transparent
+
+            &::after
+                content: ''
+                margin-left: 8px
+                padding-right: 10px
+                background: url('../img/main/icon_arrow_next.svg'),url('../img/main/icon_arrow_next_light.svg') 
+                background-repeat: no-repeat,no-repeat
+                background-position: center,center
+                +default_animation
+
+            &:hover
+                color: $color_sys_main
+                &::after
+                    background: url('../img/main/icon_arrow_next_light.svg') no-repeat center center
+
+            &:focus
+                color: $color_blue_dark
+                &::after
+                    background: url('../img/main/icon_arrow_next.svg') no-repeat center center
+
+    // 最後頁 li
+    &:nth-last-child(2)
+
+        .page_link
+
+            &::after
+                content: ''
+                padding-right: 14px
+                background: url('../img/main/icon_arrow_last.svg'),url('../img/main/icon_arrow_last_light.svg')
+                background-repeat: no-repeat,no-repeat
+                background-position: center,center
+                +default_animation
+
+            &:hover
+                &::after
+                    background: url('../img/main/icon_arrow_last_light.svg') no-repeat center center
+
+            &:focus
+                &::after
+                    background: url('../img/main/icon_arrow_last_light.svg') no-repeat center center
+
+    &.active .page_link
+        z-index: 3
+        color: $color_white
+        background-color: $color_blue_dark
+
+    &.disabled .page_link
+        pointer-events: none
+        cursor: autos
+        opacity: .2
+
+// 總頁數
+.page_total
+    display: block
+    margin-top: 2rem
+    text-align: center
+    font-size: 17px
+    line-height: 1.25
+    color: $color_blue_dark
+
+// 跳頁btn
+.input_group
+    position: relative
+    display: flex
+    flex-wrap: wrap // For form validation feedback
+    align-items: stretch
+    width: 100%
+
+    > .form_control
+        position: relative // For focus state's z-index
+        flex: 1 1 auto
+        width: 1%
+        min-width: 0 // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+        margin-bottom: 0
+        // display: block
+        padding: 11px 8px 10px
+        line-height: 1.25
+        font-size: 17px
+        height: unset
+        color: $color_blue_dark
+        background: $color_white
+        text-decoration: none
+        border-radius: 8px
+        outline: none
+        border: 2px solid $color_paginator
+        +default_animation
+        &::placeholder
+            color: $color_text_gray
+
+    > .form_control:not(:last-child)
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+
+.input_group > .input_group_append 
+    display: flex
+    margin-left: -1px
+
+.input_group > .input_group_append  >.page_link
+    margin: 0 0
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    border-top: 2px solid $color_paginator
+    border-right: 2px solid $color_paginator
+    border-bottom: 2px solid $color_paginator
+    +default_animation
+
+    &::after
+        padding-right: 18px
+        content: ''
+        width: 18px
+        height: 16px
+        background: url('../img/main/icon_arrow_jump.svg'),url('../img/main/icon_arrow_jump_light.svg')
+        background-repeat: no-repeat,no-repeat
+        background-position: center,center
+        +default_animation
+
+    &:hover
+        &::after
+            background: url('../img/main/icon_arrow_jump_light.svg') no-repeat center center
+            
+    &:focus
+        &::after
+            background: url('../img/main/icon_arrow_jump_light.svg') no-repeat center center
+
+.input_group > .input_group_append > .page_link
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+
+// m版 select
+.page
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    &_select
+        font-size: 17px
+        line-height: 1.25
+        width: 120px
+        padding: 12px 15px 15px
+        border: unset
+        color: $color_blue_dark
+        margin: 0 4px
+        background: url('../img/main/icon_arrow_down.svg'),url('../img/main/icon_arrow_down_light.svg') $color_paginator
+        background-repeat: no-repeat
+        background-position: right center
+        background-size: 31px 10px
+        appearance: none 
+        border-radius: 8px
+        outline: none
+
+        &:hover
+            color: $color_white
+            background: url('../img/main/icon_arrow_down_light.svg') no-repeat right center $color_blue_dark
+            background-size: 31px 10px
+
+        &:focus
+            color: $color_white
+            background: url('../img/main/icon_arrow_down_light.svg') no-repeat right center $color_blue_dark
+            background-size: 31px 10px
+            
+// 分頁 mb 單獨數值
+.paginator_mb
+    padding-left: 15px
+    padding-right: 15px
+
+    .pagination
+        flex-wrap: wrap
+
+    .page_item 
+
+        &:first-child, &:nth-last-child(2)
+            display: none
+            @include xxsScreen
+                display: unset
+
+        &:last-child 
+            margin-top: 10px
+            @include mdScreen
+                margin-top: 0
+
+    .page_select
+        @include xxsScreen
+            width: 76px
+        @include xsScreen
+            width: 120px 
+
+    .input_group
+        width: 276px
+        @include xxsScreen
+            width: 334px
+        @include xsScreen
+            width: 380px
+        @include mdScreen
+            width: 160px
+            margin: 0 4px
+
+// 分頁 pc 單獨數值
+.paginator_pc
+
+    .input_group
+        margin: 0 4px
+        width: 160px

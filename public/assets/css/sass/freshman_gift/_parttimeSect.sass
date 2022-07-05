@@ -1,0 +1,109 @@
+.parttimeSect
+    background: #72cbbe
+    padding: 55px 0 40px
+
+// list 區 
+.parttime__list
+    margin: 0 15px
+
+// list title
+.parttime__title
+    font-size: 18px
+    margin-top: 30px
+    padding-top: 20px
+    margin-bottom: 12px
+    color: #fff
+    border-top: 1px solid #bce0db
+
+.parttime__title-img
+    width: 20px
+    margin-right: 5px
+    margin-left: 8px
+
+// list 區 內容
+.parttime__box
+    background: $color_white
+    display: flow-root
+    padding: 25px
+    border-radius: 4px
+    margin-bottom: 10px
+    .parttime_nodata
+        color: $color_red
+        font-size: 16px
+        text-align: center
+
+.parttime__text-work
+    float: left
+    width: 50%
+    @include max_410
+        float: left
+        width: 100%
+        padding: 7px
+        margin-bottom: 6px
+        border-bottom: 1px solid #ced4da
+    // &:hover
+    //     text-decoration: none
+    h4
+        color: #333
+        font-size: 16px
+        display: block
+        width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+    span
+        font-size: 13px
+        color: #72cbbe
+        padding-top: 3px
+        display: block
+        width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        
+
+// list 區 內容 pay
+.parttime__pay
+    float: left
+    font-size: 15px
+    width: 25%
+    margin: 6px 15px
+    padding: 4px 0
+    text-align: center
+    border-right: 1px solid #ced4da
+    border-left: 1px solid #ced4da
+    @include max_410
+        width: auto
+        margin: 0
+        border-right: 0 solid #ced4da
+        border-left: 0 solid #ced4da
+        float: left
+        font-size: 15px
+        padding: 7px 0
+
+.parttime__btn
+    margin: 4px auto
+    max-width: 80px
+    color: $color_red
+    border: 2px solid $color_red
+    padding:  3px 14px 3px
+    background: $color_white
+    border-radius: 4px
+    width: 15%
+    display: block
+    font-size: 14px
+    @include max_410
+        width: auto
+        margin: 3px 0 0
+        padding: 3px 15px 3px
+        float: right
+        font-size: 14px
+
+.parttime__more-btn
+    background: #fff45c
+    color: #19a28e
+    border-radius: 4px
+    padding: 3px 14px 3px
+    border: 2px solid #fff45c
+    margin: 0 auto
+    display: block

@@ -1,0 +1,42 @@
+.detail
+    &__search
+        // head
+        .detail
+            &__head
+                &-list
+                &-top
+                    @include smScreen
+                        width: 104px
+                        b
+                            &:nth-child(1)
+                                width: 100%
+                    @include mdScreen
+                    //     width: 130px
+                    @include lgScreen
+                        width: 10%
+                &-bottom
+                    @include smScreen
+                        width: 100%
+                    @include lgScreen
+                        margin-left: 40px
+        // content
+        .detail
+            &__top
+                padding: 0 0 11px 0
+                @include smScreen
+                    width: 104px
+                @include mdScreen
+                //     width: 130px
+                @include lgScreen
+                    width: 10%
+            &__info
+                width: 100%
+                @include smScreen
+                    margin-left: 0
+                    width: 104px
+            &__school
+                &-container
+                    @include smScreen
+                        width: 100%
+                    @include lgScreen
+                        margin-left: 40px

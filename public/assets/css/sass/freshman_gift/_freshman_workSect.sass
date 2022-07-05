@@ -1,0 +1,36 @@
+.workSect,.universitySect
+    padding: 40px 0 30px
+    background: $color_school_main
+    @include mdScreen
+        padding: 55px 0 40px
+    .container,
+    .container-sm, 
+    .container-md,
+    .container-lg
+        padding: 0 25px
+        @include lgScreen
+            max-width: 790px
+            padding: 0 15px
+        @include xlScreen
+            max-width: 790px
+    .swiper
+        &-slide
+            background: transparent
+        &-pagination
+            position: relative
+        &-pagination-bullet
+            width: 13px
+            height: 13px
+            opacity: 1
+            background: $color_swiper_pagination
+        &-pagination-bullet-active
+            background: $color-white
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal
+        bottom: 0
+        margin-top: 35px
+.universitySect
+    background: $color_white
+
+            
+   

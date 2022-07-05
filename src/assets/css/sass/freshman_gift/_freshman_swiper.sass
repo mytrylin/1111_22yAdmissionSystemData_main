@@ -1,0 +1,54 @@
+.swiper
+    &-wrapper
+        padding-bottom: 15px
+    &__contentBox
+        position: relative
+    &-slide
+        display: flex
+        justify-content: center
+        align-items: center
+    &__next,
+    &__next-uv,
+    &__prev,
+    &__prev-uv
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 40%
+        transform: translateY(-60%)
+        width: 30px
+        height: 40px
+        // background: #0088cc
+        z-index: 99
+        cursor: pointer
+        img
+            width: 19px
+            @include lgScreen
+                width: 17px
+    &__next,
+    &__next-uv,
+        justify-content: flex-end
+        right: -25px
+        @include lgScreen
+            right: -40px
+        img
+            padding-right: 5px
+            @include lgScreen
+                padding-right: 0
+    &__prev,
+    &__prev-uv
+        justify-content: flex-start
+        left: -25px
+        @include lgScreen
+            left: -40px
+        img
+            padding-left: 5px
+            @include lgScreen
+                padding-left: 0
+    
+
+
+
+
+

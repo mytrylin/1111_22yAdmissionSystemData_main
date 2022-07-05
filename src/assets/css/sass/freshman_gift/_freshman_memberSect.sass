@@ -1,0 +1,37 @@
+.memberSect
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 40px 0 60px
+    background: $color_gray_bg
+    text-align: center
+    margin-bottom: 1px
+    @include mdScreen
+        padding: 55px 0 80px
+    .container,
+    .container-sm, 
+    .container-md,
+    .container-lg
+        padding: 0 25px
+        @include lgScreen
+            max-width: 585px
+            padding: 0 15px
+        @include xlScreen
+            max-width: 585px
+
+.member
+    &__firstTitle        
+        color: $color_school_main
+        margin-bottom: 20px
+        font-size: 28px
+        font-weight: $font_weight_700
+    &__text
+        text-align: left
+        color: $member_text
+        font-size: 14px
+    &__img
+        margin: 25px auto
+        width: 100%
+        @include xsScreen
+            width: 292px

@@ -1,0 +1,152 @@
+.navbar
+    margin-top: 28px
+    background: rgba(111, 202, 189, .98)
+    padding: 0
+    +box_shadow
+    @include lgScreen
+        flex-flow: row nowrap
+        justify-content: flex-start
+
+    .container
+        max-width: 100%
+        padding-right: 0
+        padding-left: 0
+        @include xxlScreen
+            max-width: 1340px
+
+    &_content
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 100%
+        padding: 0 1rem
+        height: 60px
+        @include lgScreen
+
+    &_logo
+        height: 34px
+        @include lgScreen
+            height: 40px
+        img
+            height: 100%
+    //  ul
+    &-nav
+        border-top: 3px solid $color_white
+        padding: 1.2rem 0
+        @include lgScreen
+            border-top: 0
+            padding: 0 1rem 0 0
+
+.navbar-expand-lg
+    .navbar-nav
+        .nav-item
+            &:last-child
+                .nav-link
+                    @include lgScreen
+                        padding-right: 0
+
+        .nav-link
+            // 宣單過多，992~1200 間的設定
+            // @include lgScreen
+            //     padding-right: .5rem
+            //     padding-left: .5rem
+            //     font-size: unset
+            @include xlScreen
+                font-size: 19px
+                padding-right: 1rem
+                padding-left:  1rem
+                
+        .dropdown
+            &-menu
+                @include lgScreen
+                    top: 2.25rem
+                    left: 50%
+                    transform: translateX(-50%)
+                    +box_shadow
+                    min-width: 11.25rem
+                    &::before
+                        position: absolute
+                        border: solid transparent
+                        content: ' '
+                        width: 0
+                        left: 18px
+                        border-width: 12px
+                        top: -18px
+                        left: 50%
+                        transform: translateX(-50%)
+                        border-bottom-color: $color_white
+            &-item
+                &:hover, 
+                &:focus
+                    color: $color_blue_dark
+                    background-color: #e9ecef
+// 線上版本
+// 00_phased_rollout_menu.html 設定 ↓↓↓↓↓
+.navbar-expand-lg
+    .navbar-nav
+        .nav-item
+            &:last-child
+                .dropdown-menu
+                    @include lgScreen
+                        left: 30%
+                        &::before
+                            left: 36.5%
+                    @include xlScreen
+                        left: 50%
+                        &::before
+                            left: 50%
+// 00_phased_rollout_menu.html 設定 ↑↑↑↑↑
+
+// 完整版本
+// 00_final_release_menu.html設定 ↓↓↓↓↓
+.navbar-expand-lg 
+    .navbar-nav 
+        .nav-item:last-child
+            #navbarDropdown_submenu
+                + .dropdown-menu
+                    left: 18%
+                    &::before
+                        left: 50%
+// 00_final_release_menu.html設定 ↑↑↑↑↑
+
+// nav li
+.nav
+    &-item
+        @include lgScreen
+            &:not(:last-child)
+                border-right: 1px solid $color_white
+                
+    &-link
+        padding: 0.625rem 1rem
+        color: $color_white !important
+        +navbar_txt
+        +text_shadow
+        @include lgScreen
+            padding: 0 0
+
+.new_link
+    color: #ffeb3b !important
+    img
+        width: 40px
+        margin-left: 2px
+
+.navbar
+    &-light
+        .navbar
+            &-toggler
+                border-color: transparent
+    
+// dropdown           
+.dropdown
+    &-menu
+        padding: 0.625rem 0
+        width: 80%
+        margin: 0 auto
+        border-radius: $radius_navbar
+        border: 0
+
+    &-item
+        padding: 0.625rem 1rem
+        +navbar_txt
+        color: $color_blue_dark

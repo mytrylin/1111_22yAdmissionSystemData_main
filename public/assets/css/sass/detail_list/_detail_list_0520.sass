@@ -1,0 +1,138 @@
+// section
+section.tunlistSect
+    padding: 30px 0 40px
+    @include mdScreen
+        padding: 50px 0 40px
+    @include lgScreen
+        padding: 70px 0 60px
+    &_inner
+        padding: 0 0 40px
+        @include mdScreen
+            padding: 30px 0 40px
+        @include lgScreen
+            padding: 50px 0 60px
+// 表單區＿＿內容
+.detail__contentBox
+    margin: 20px auto 0
+    padding-right: 15px
+    padding-left: 15px
+    @include smScreen
+        margin: 10px auto 0
+        padding-right: 30px
+        padding-left: 30px
+    @include xxlScreen
+        padding-right: 0
+        padding-left: 0
+
+// 表單 ul
+.detail
+    &__container
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        list-style: none
+        width: 100%
+        max-width: 1140px
+        @include smScreen
+            border-radius: unset
+        
+    // li
+    &__list
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-content: space-between
+        padding: 12px 4px 4px 4px
+        background: $color_blue_bg
+        border-radius: 8px
+        +default_animation
+        &:not(:last-child)
+            margin-bottom: 7px
+        @include smScreen
+            background: unset
+            width: 100%
+            align-items: center
+            justify-content: space-between
+            padding: 11px 15px 11px 20px
+            flex-wrap: nowrap
+            &:nth-child(even)
+                background: $color_blue_bg
+                border-radius: 4px
+        
+        @include mdScreen
+            padding: 11px 0 11px 20px
+    &__top
+        display: flex
+        justify-content: center
+        width: 100%
+        padding: 0 20px 11px 0
+        @include smScreen
+            flex-grow: 0
+            flex-shrink: 0
+            width: 40%
+            padding: 0
+        @include mdScreen
+            width: 30%
+        @include lgScreen
+            width: 25%
+            
+    // 錄取狀態
+    &__status
+        // position: relative
+        width: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 19px
+        color: $color_white
+        @include smScreen
+            width: 70px
+            flex-grow: 0
+            flex-shrink: 0
+        
+            
+    // 正取
+    &__admission, &__alternate
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 4px 0 5px
+        width: 70px
+        border-radius: 4px
+    &__admission
+        background: $color_red
+    // 備取
+    &__alternate
+        background: $color_main
+    // 號碼姓名區
+    &__info
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        width: 50%
+        color: $color_blue_dark
+        @include smScreen
+            width: 100%
+            margin-left: 10px
+        @include mdScreen
+            margin-left: 0
+        @include lgScreen
+            width: 100%
+            
+    &__number
+        font-size: 18px
+        line-height: 20px
+        flex-grow: 0
+        flex-shrink: 0
+        @include smScreen
+            font-size: 20px
+            line-height: 28px
+    &__person
+        font-size: 18px
+        line-height: 20px
+        flex-grow: 0
+        flex-shrink: 0
+        @include smScreen
+            font-size: 20px
+            line-height: 28px

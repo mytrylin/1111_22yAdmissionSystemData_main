@@ -1,0 +1,55 @@
+.paginator
+    display: flex
+    justify-content: center
+    align-items: center
+    &__select
+        font-size: 17px
+        line-height: 17px
+        width: 120px
+        padding: 11px 15px 15px
+        border: unset
+        color: $color_blue_dark
+        margin: 0 4px
+        background: url('../img/main/icon_arrow_down.svg') no-repeat $color_paginator
+        background-position: right center
+        background-size: 30px 11px
+        appearance: none 
+        border-radius: 8px
+        outline: none
+    &__btn
+        display: flex
+        align-content: center
+        justify-content: space-between
+        font-size: 17px
+        line-height: 17px
+        outline: none
+        cursor: pointer
+        padding: 11px 12px 15px
+        border: none
+        color: $color_blue_dark
+        background: $color-white
+        &-next,
+        &-prev
+            position: relative
+            &::after
+                position: absolute
+                content: ''
+                width: 10px
+                height: 20px
+                top: 50%
+                transform: translateY(-50%)
+                display: flex
+                justify-content: center
+                align-items: center
+        &-next
+            padding: 10px 20px 15px 12px
+            &::after
+                right: 0
+                background: url('../img/main/icon_arrow_next.svg') no-repeat
+                background-origin: 2px right
+        &-prev
+            padding: 10px 12px 15px 20px
+            &::after
+                left: 0
+                background: url('../img/main/icon_arrow_prev.svg') no-repeat
+                background-origin: center left

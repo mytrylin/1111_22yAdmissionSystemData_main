@@ -1,0 +1,138 @@
+
+.freshmanSect
+    padding-bottom: 40px
+    overflow: hidden
+    @include smScreen
+        padding-top: 40px
+    @include mdScreen
+        padding-bottom: 55px
+    .form-group.row
+        justify-content: center
+        &:nth-child(2)
+            @include xsScreen
+                margin-top: 30px
+                margin-bottom: 10px
+        .form-check
+            &:not(:last-child)
+                // background: #0088cc
+                padding-left: 0
+                @include xsScreen
+                    padding-left: 1.25rem
+        &:nth-child(3)
+            display: flex
+            align-items: center
+            // flex-wrap: nowrap
+            label
+                text-align: center
+                font-size: 20px
+                color: $color_text_gray_dark
+                flex-shrink: 0
+            .form-control
+                margin-left: 16px
+                width: 120px
+                color: $color_red
+                // color: $color_school_main
+                &::placeholder
+                    color: $color_text_gray
+                @include xsScreen
+                    width: 180px
+        &:last-child
+            margin-top: 20px
+
+                // width: unset
+                // flex-grow: 1
+                // flex-shrink: 1
+        
+
+
+    // 標題
+    header
+        width: 100%
+        @include xsScreen
+            width: unset
+        h2
+            margin: 30px 0 10px 0
+            text-align: center
+            font-size: 20px
+            color: $color_text_gray_dark
+            // font-weight: $font_weight_300
+            @include xsScreen
+                margin: 0
+    .form-check
+        input[type="radio"]
+            position: absolute
+            display: none
+        input[type="radio"]:checked ~  label .freshman__check
+            border: 1px solid $color_school_main
+        input[type="radio"]:checked ~  label .freshman__check::before
+            background: $color_school_main  url('../img/main/icon_check.svg') 
+        input[type="radio"]:checked ~ label
+            color: $color_school_main
+    .form-check-label
+        display: block
+        position: relative
+        // font-weight: 300
+        font-size: 20px
+        padding: 0 0 25px 30px
+        margin: 0
+        height: 25px
+        z-index: 9
+        cursor: pointer
+        -webkit-transition: all 0.25s linear
+        font-size: 20px
+        line-height: 23px
+        color: $color_text_gray_dark
+        // font-weight: $font_weight_300
+        // background: #051d5d
+    .freshman
+        &__check
+            display: block
+            position: absolute
+            border: 1px solid #ced4da
+            border-radius: 4px
+            height: 25px
+            width: 25px
+            top: 0
+            left: 0
+            z-index: 5
+            transition: border .25s linear
+            &::before
+                display: block
+                position: absolute
+                content: ''
+                border-radius: 2px
+                height: 25px
+                width: 25px
+                top: 0
+                left: 0
+                margin: auto
+                transition: background 0.25s linear
+            
+// 可獨立物件
+.freshman
+    &__img
+        margin: 0 auto
+        width: 200px
+        @include xsScreen
+            width: 284px
+        img
+            animation: swing 10s ease infinite
+    &__btn
+        font-size: 18px
+        line-height: 1
+        color: $color_white
+        // font-weight: $font_weight_300
+        border: 1px solid transparent
+        padding: 9px 17px 11px
+        background: $color_red
+        border-radius: 4px
+        +default_animation
+        @include smScreen
+            font-size: 18px
+        &:hover
+            background: $color_white
+            color: $color_red
+            border: 1px solid $color_red
+            box-shadow: 0 6px 8px rgba(0, 0, 0, .1)
+   
+

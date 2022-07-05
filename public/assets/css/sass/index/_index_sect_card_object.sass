@@ -1,0 +1,240 @@
+.rotate_360
+    animation: 1s linear 2 rotate_360
+    transform-origin: center 56.8%
+
+// refresh btn
+.refresh_btn
+    display: flex
+    justify-content: flex-end
+    > a
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        img
+            width: 57px
+            +card_animation
+            transform-origin: center 56.8%
+        figcaption
+            position: absolute
+            margin-top: 6px
+            color: $color_default_text
+            font-size: 16px
+// step btn
+.step_btn
+    display: flex
+    justify-content: flex-start
+    &_group
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        img
+            width: 57px
+            +card_animation
+            transform-origin: center 56.8%
+        figcaption
+            position: absolute
+            margin-bottom: 2px
+            color: $color_default_text
+            font-size: 16px
+
+
+// 解鎖黃金卡進度 的 任務條 外觀
+.check
+    &_list
+        margin: 18px 0 25px
+        @include mdScreen
+            margin-left: 25px
+            margin-right: 25px
+        li
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding: 10px
+            background: $bg_check_list
+            border-radius: 10px
+            > p
+                padding-left: 10px
+                padding-bottom: 2px
+                color: $color_dark
+                font-size: 20px
+                font-weight: $font_size_500
+                text-align: left
+            &:not(:last-child)
+                margin-bottom: 5px
+                
+        &_icon
+            position: relative
+            flex-shrink: 0
+            flex-grow: 0
+            width: 26px
+            height: 26px
+            border-radius: 50%
+            border: 3px solid #03aff0
+    &_icon
+        // transition: border 2s ease-out
+        // transition: 1s linear 2 check_icon
+        display: block
+        background: #0088cc
+        &::after
+            position: absolute
+            content: ""
+            top: 58%
+            left: 2px
+            height: 15px
+            width: 8px
+            border-top: 3px solid #03aff0
+            border-right: 3px solid #03aff0
+            transform-origin: left top
+            transform: scaleX(-1) rotate(135deg)
+            animation: 1s linear 1 check_icon
+            
+
+// 任務進度 圖片modal群組
+.img_box
+    position: relative
+    margin: 15px 0 25px
+    background: $bg_img_box
+    border-radius: 10px
+    border: 3px solid $bg_img_box
+    overflow: hidden
+    img
+        width: 100%
+    &_btn
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 7px 7px
+        +main_gradient
+        border: 0
+        border-radius: 50%
+        width: 36px
+        height: 36px
+        top: 0
+        right: 0
+        +card_animation
+        &:hover
+            transform: scale(1.05)
+            +card_box_btn
+            img
+                transform: scale(1.05)
+        img
+            width: 18px
+            height: 18px
+            +card_animation
+        // modal
+    &_modal_content
+        position: relative
+        margin: 0 auto
+        width: 100%
+        pointer-events: auto
+        background-color: #fff
+        background-clip: padding-box
+        border: 2px solid #fff
+        border-radius: 17px
+        outline: 0
+        +btn_gradient_shadow
+        img
+            width: 100%
+            border-radius: 17px
+        @include xsScreen
+            width: unset
+        @include mdScreen
+            border-radius: 25px
+    // close btn
+    &_btn_close
+        position: absolute
+        top: -50px
+        right: 0
+        // transform: translateX(-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        height: 30px
+        background: $color_white
+        box-sizing: content-box
+        padding: 0.25em 0.25em
+        border: 0
+        border-radius: 50%
+        +btn_gradient_shadow
+        +card_animation
+        @include mdScreen
+            width: 52px
+            height: 52px
+            top: -25px
+            right: -25px
+        img
+            width: 50%
+    + .card_box_text
+        // margin: 0 10px 21px
+        // margin-bottom: 21px
+        // padding: 0 10px
+        text-align: left
+
+
+.img_box_more
+    margin: 15px 0 10px
+    .img_box
+        margin: 0 0 25px
+           
+       
+// modal 背景色
+.modal-backdrop
+    background: linear-gradient(0, #e9d7f5 0%, #cdeefc 100%) !important
+.modal-backdrop.show
+    opacity: .9 !important
+.modal-dialog-centered
+    @include smScreen
+        width: unset
+        max-width: unset
+// modal text 版本
+.modal
+    &_content_case
+        position: relative
+        margin: 0 auto
+        padding: 45px 30px 
+        width: 100%
+        max-width: 480px
+        font-size: 18px
+        pointer-events: auto
+        background-color: #fff
+        background-clip: padding-box
+        border: 2px solid #fff
+        border-radius: 17px
+        outline: 0
+        +btn_gradient_shadow
+        color: $color_default_text
+
+        b
+            color: $color_main_blue
+        
+    &_btn_close
+        // transform: translateX(-50%)
+        display: flex
+        justify-content: center
+        align-items: center        
+        box-sizing: content-box
+        color: $color_white
+        margin: 1.4rem auto 0
+        border-radius: 8px
+        padding: 12px 20px
+        border: 0
+        font-size: 18px
+        +main_gradient
+        +card_animation
+        &:hover
+            +main_gradient_hover
+            +btn_gradient_shadow
+
+        
+
+    
+    
+
+
+
+        
+    

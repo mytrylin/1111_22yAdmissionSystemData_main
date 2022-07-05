@@ -1,0 +1,182 @@
+// 學校區 ul
+.detail
+    &__school
+        &-container
+            width: 100%
+            list-style: none
+            background: $color-white
+            border-radius: 8px
+            @include smScreen
+                background: unset
+                width: 60%
+            @include mdScreen
+                width: 70%
+            @include lgScreen
+                width: 75%
+        &-list
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            padding: 10px 7px
+            +default_animation
+            @include smScreen
+               padding: 10px 0  10px 10px
+            @include mdScreen
+               padding: 3px 15px  3px 10px
+            &:not(:last-child)  
+                border-bottom: 1px solid $color_sys_bg
+                @include smScreen
+                    border-bottom: unset
+                // @include smScreen
+                //     width: unset
+                //     padding: 0
+            .detail
+                &__status
+                    width: unset
+                    flex-grow: 0
+                    flex-shrink: 0
+                    // @include lgScreen
+                    //     width: 15%
+                &__admission, 
+                &__alternate
+                    padding-top: 4px
+                    padding-bottom: 7px
+                    font-size: 16px
+                    line-height: 16px
+                    flex-grow: 0
+                    flex-shrink: 0
+                    width: 60px
+                    @include smScreen
+                        font-size: 18px
+                        width: 70px
+                        padding-top: 6px
+                        padding-bottom: 9px
+                        // padding: 2px 0 3px
+                    @include mdScreen
+                        // padding: 4px 0 5px
+                &__type
+                    font-size: 13px
+                    margin: 1px 0 0
+                    padding-bottom: 4px
+                    margin-bottom: 3px
+                    @include smScreen
+        //detail__school-name 未加 a 連結的設定
+        // &-name
+        //     width: 100%
+        //     padding-left: 32px
+        //     font-size: 18px
+        //     color: $color_blue_dark
+        //     flex-grow: 1
+        //     @include smScreen
+        //         padding-left: 35px
+        //         font-size: 20px
+        //     span
+        //         display: block
+        //         @include xsScreen
+        //             display: inline-block
+        //             margin-right: 5px
+        // detail__school-name 轉為 a 連結設定
+        &-name
+            width: 100%
+            padding-left: 32px
+            flex-grow: 1
+            @include smScreen
+                padding-left: 35px
+            &:hover
+                color: $color_blue_dark
+            h3
+                font-size: 18px
+                color: $color_blue_dark
+                @include smScreen
+                    font-size: 20px
+                span
+                    display: block
+                    @include xsScreen
+                        display: unset
+                        margin-right: 5px
+        &-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 8px
+            width: 30px
+            height: 30px
+            background: $color_paginator
+            border-radius: 50px
+            border: unset
+            flex-grow: 2px solid $color-white
+            flex-shrink: 0
+            cursor: pointer
+            +default_animation
+            // &:hover
+            //     box-shadow: 0 0 5px rgba(118, 191, 255, 1)
+            @include smScreen
+                margin: 0 10px
+            @include lgScreen
+                margin: 0 calc( 7.5% - 15px )
+                
+            img
+                width: 8px
+                cursor: pointer
+                
+    // 確定錄取
+    &__confirm
+        position: relative
+        &::before
+            position: absolute
+            content: ''
+            width: 25px
+            height: 25px
+            border-radius: 50px
+            left: 7px
+            top: 50%
+            transform: translateY(-50%)
+            background: url('../img/main/icon_star.svg') no-repeat $color_paginator center center
+            background-size: 85%
+            @include smScreen
+                left: 10px
+
+    // 看更多
+    &__close
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $color-white
+        border-radius: 0 0 8px 8px
+        @include smScreen
+            justify-content: flex-start
+            padding: 10px 0  10px 10px
+            background: transparent
+            border-radius: 0
+        @include lgScreen
+            padding: 3px 0  3px 10px
+            justify-content: flex-start
+        &-btn
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: nowrap
+            border: unset
+            background: transparent
+            color: $color_sys_main
+            font-size: 16px
+            padding: 10px 10px
+            cursor: pointer
+            border-radius: 0 0 8px 8px
+            +default_animation
+            border-radius: 50px
+            @include smScreen
+                width: unset
+                padding: 0
+                margin-left: 35px
+                font-size: 18px
+            &:hover
+                @include mdScreen
+                    background: $color_paginator
+                    padding: 2px 15px 4px
+            img
+                width: 15px
+                margin-left: 4px

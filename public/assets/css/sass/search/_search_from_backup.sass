@@ -1,0 +1,88 @@
+.searchBox
+    display: flex
+    justify-content: center
+    margin: 0 15px
+    padding: 3px
+    @include xsScreen
+        margin: 0 30px
+    &:not(:last-child)
+        margin-top: 30px
+        @include mdScreen   
+            margin-top: 40px
+.search
+    &__container
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        width: 100%
+        background: $color_sys_bg
+        border-radius: 8px
+        padding: 21px 11px
+        +default_animation
+        @include xsScreen
+            padding: 30px
+            max-width: 500px
+        @include mdScreen
+            padding: 40px
+            max-width: 550px
+    &__title,
+    &__group
+        display: flex
+        justify-content: center
+        width: 100%
+        flex-grow: 0
+        flex-shrink: 0
+    &__title
+        font-size: 20px
+        margin-bottom: 10px
+        font-weight: $font_weight_700
+        color: $color_blue_dark
+        @include xsScreen
+            margin-bottom: 15px
+        @include mdScreen
+            font-size: 26px
+    &__group
+        width: 100%
+        max-width: 300px
+        display: flex
+        background: $color-white
+        padding: 4px
+        border-radius: 50px
+        @include xsScreen
+            max-width: 380px
+        @include mdScreen
+            padding: 9px 
+    &__input
+        width: 100%
+        padding: 0 10px 2px 32px
+        background: url('../img/main/icon_searchengin.svg') no-repeat 6px 45% 
+        background-size: 20px
+        font-size: 18px
+        border-radius: 50px
+        border: none
+        outline: none
+        @include mdScreen
+            font-size: 20px
+            background-size: 26px
+            padding: 0 10px 2px 42px
+            background-position: 8px 45%
+        &::placeholder
+            color: $color_text_gray   
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 6px 16px 8px
+        font-size: 17px
+        line-height: 1
+        color: $color-white
+        background: $color_sys_main
+        border: 2px solid transparent
+        border-radius: 50px
+        flex-grow: 0
+        flex-shrink: 0
+        +default_animation
+        &:active,
+        &:hover
+            background: $color-blue-dark
+        

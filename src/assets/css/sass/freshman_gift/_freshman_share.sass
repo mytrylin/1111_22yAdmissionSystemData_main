@@ -1,0 +1,136 @@
+.swiper
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        font-size: 20px
+        color: $color_white
+        // font-weight: $font_weight_300
+        margin-bottom: 12px
+        &-img
+            width: 42px
+            margin-right: 5px
+            margin-left: 8px
+.e
+    &__card
+        width: 100%
+        background: $color_swiper_bg
+        padding: 24px 20px 20px
+        border-radius: 4px
+        color: $color_swiper_text
+        text-decoration: none
+        font-weight: 400
+        text-align: left
+        +default_animation
+        &:hover
+            color: $color_swiper_text
+            text-decoration: none
+        &-img
+            margin-bottom: 16px
+            img
+                width: 100%
+        &-firstTitle-work
+            font-size: 18px
+            display: block
+            width: 100%
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            // font-weight: $font_weight_300
+        &-subTitle-work
+            font-size: 14px
+            display: block
+            width: 100%
+            margin-bottom: 16px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            // font-weight: $font_weight_300
+        &-text-work
+            font-size: 16px
+            margin-bottom: 4px
+            display: block
+            width: 100%
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            // font-weight: $font_weight_300
+        &-footer
+            display: flex
+            justify-content: center
+            align-items: center
+            .detail__admission
+                color: $color-white
+                // font-weight: $font_weight_300
+                font-size: 16px
+                line-height: 16px
+                width: 70px
+                padding: 2px 0 4px
+                flex-grow: 0
+                flex-shrink: 0
+        &-firstTitle-uv
+            font-size: 16px
+            margin-bottom: 4px
+            display: block
+            width: 100%
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            font-weight: $font_weight_500
+        &-subTitle-uv
+            font-size: 14px
+            display: block
+            width: 100%
+            line-height: 14px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            // font-weight: $font_weight_300
+           
+.workSect,.universitySect
+    padding: 40px 0 30px
+    background: $color_school_main
+    @include mdScreen
+        padding: 55px 0 40px
+    .container,
+    .container-sm, 
+    .container-md,
+    .container-lg
+        padding: 0 25px
+        @include lgScreen
+            max-width: 790px
+            padding: 0 15px
+        @include xlScreen
+            max-width: 790px
+    .swiper
+        &-slide
+            background: transparent
+        &-pagination
+            position: relative
+        &-pagination-bullet
+            width: 13px
+            height: 13px
+            opacity: 1
+            background: $color_swiper_pagination
+        &-pagination-bullet-active
+            background: $color-white
+    .swiper-pagination-bullets.swiper-pagination-horizontal
+        bottom: 0
+        margin-top: 20px
+    .e__card
+        &:hover
+            box-shadow: 0 6px 8px rgba(0, 0, 0, .1)
+
+.universitySect
+    background: $color_white
+    .swiper
+        &-pagination-nv
+            text-align: center
+        &-pagination-bullet-active
+            background: $color_school_main
+        &__title
+            color: $color_swiper_text
+    .e__card
+        &:hover
+            box-shadow: 0 6px 8px rgba(0, 0, 0, .2)
+

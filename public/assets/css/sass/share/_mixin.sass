@@ -1,0 +1,59 @@
+@mixin xxsScreen
+    @media (min-width: 375px)
+        @content
+@mixin xsScreen
+    @media (min-width: 425px)
+        @content    
+@mixin smScreen
+    @media (min-width: 576px)
+        @content
+@mixin mdScreen
+    @media (min-width: 768px)
+        @content
+@mixin lgScreen
+    @media (min-width: 992px)
+        @content
+// 1110 menu 專用 ↓↓↓↓↓
+@mixin lgScreen_1110
+    @media (min-width: 1110px)
+        @content
+// 1110 menu 專用 ↑↑↑↑↑
+@mixin xlScreen
+    @media (min-width: 1200px)
+        @content
+@mixin xxlScreen
+    @media (min-width: 1400px)
+        @content
+@mixin xxxlScreen
+    @media (min-width: 1920px)
+        @content
+// max 410 p14 新鮮人懶人包 part time 專用 ↓↓↓↓↓       
+@mixin max_410
+    @media (max-width: 410px)
+        @content
+// max 410 p14 新鮮人懶人包 part time 專用 ↑↑↑↑↑
+
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+@mixin text_shadow
+    text-shadow: 0 0 10px rgba(0, 0, 0, .15)
+
+@mixin box_shadow
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+
+@mixin navbar_txt
+    text-align: center
+    font-size: $text_size_nav
+    font-weight: $font_weight_500
+
+@mixin default_animation
+    transition: all .3s ease-out

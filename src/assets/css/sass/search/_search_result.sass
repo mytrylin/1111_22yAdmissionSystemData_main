@@ -1,0 +1,35 @@
+.resultBox
+    padding-right: 15px
+    padding-left: 15px
+    @include smScreen
+        margin: 10px auto 0
+        padding-right: 30px
+        padding-left: 30px
+    @include xxlScreen
+        padding-right: 0
+        padding-left: 0
+
+.result
+    &__container
+        margin: 20px auto 0
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 45px 10px
+        width: 100%
+        max-width: 1140px
+        background: $color_paginator
+        border-radius: 8px
+        @include smScreen
+            margin: 30px auto 35px
+        @include mdScreen
+            padding: 70px 35px 75px
+            margin: 12px auto 0
+    &__msg
+        text-align: center
+        font-size: 18px
+        line-height: 28px
+        color: $color_blue_dark
+        @include mdScreen
+            font-size: 20px
+            line-height: 36px

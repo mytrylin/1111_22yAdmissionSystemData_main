@@ -1,0 +1,38 @@
+// nth-child(even) 確認選取 學校按鈕 更多按鈕
+.detail
+    &__list
+        @include smScreen
+            &:nth-child(even)
+                .detail
+                    &__confirm
+                        &:before
+                            background: url('../img/main/icon_star.svg') no-repeat $color_white center center
+                            background-size: 85%
+                    &__school
+                        &-btn
+                            background: $color_white
+                    &__close
+                        &-btn
+                            &:hover
+                                background: $color_white
+
+//  nth-child(even) &__list hover 效果
+.detail
+    &__list
+        &:nth-child(odd)
+            .detail
+                &__school
+                    &-list
+                        &:hover
+                            @include mdScreen
+                                background: $color_sys_bg
+                                border-radius: 50px
+
+        &:nth-child(even)
+            .detail
+                &__school
+                    &-list
+                        &:hover
+                            @include mdScreen
+                                background: $color_white
+                                border-radius: 50px

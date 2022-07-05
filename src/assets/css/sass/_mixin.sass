@@ -1,0 +1,64 @@
+@mixin xsScreen
+    @media (min-width: 425px)
+        @content    
+@mixin smScreen
+    @media (min-width: 576px)
+        @content
+@mixin mdScreen
+    @media (min-width: 768px)
+        @content
+@mixin lgScreen
+    @media (min-width: 992px)
+        @content
+@mixin xlScreen
+    @media (min-width: 1200px)
+        @content
+@mixin xxlScreen
+    @media (min-width: 1920px)
+        @content
+//單一物件適用
+@mixin media_membership_card_510
+    @media (min-width: 510px)
+        @content
+@mixin media_sec_container_1290
+    @media (min-width: 1290px)
+        @content
+
+    
+
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+@mixin gold_text_shadow
+    text-shadow: 7px 0 9px rgba(0, 0, 0, .1)
+    background: linear-gradient(to top, #f6dc91, #fff3c1, #f1d689, #a84810)
+    -webkit-background-clip: text
+    color: transparent
+
+@mixin card_animation
+    transition: all .5s ease-out
+
+@mixin main_gradient
+    background: linear-gradient(90deg, rgba(3, 175, 240, 1) 0%, rgba(148, 56, 204, 1) 100%)
+
+@mixin main_gradient_hover
+    background: linear-gradient(90deg, rgba(148, 56, 204, 1) 0%, rgba(3, 175, 240, 1) 100%)
+@mixin btn_gradient_shadow
+    box-shadow:  0 9px 46px rgba(162, 166, 233, .43)
+@mixin container_gradient_shadow
+    box-shadow:  0 9px 46px rgba(0, 0, 0, .03)
+@mixin card_box_btn
+    box-shadow:  0 3px 10px rgba(0, 0, 0, .22)
+    
+    
+    
+    
+    

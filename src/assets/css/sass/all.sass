@@ -1,0 +1,104 @@
+
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+// /////////////////////// 每頁共用
+// @media / mixin 設定
+@import 'share/_mixin'
+
+// set 基礎設定
+@import 'share/_set'     
+
+// menu
+@import 'share/_navbar'
+
+// 頭圖
+@import 'share/_mainBanner'
+
+// 所有標題
+@import 'share/_title'
+
+// paginator pc / mb
+@import 'share/_pagination'
+
+// btn 
+@import 'share/_btn'
+
+// 單一物件class
+@import 'share/_class'
+
+// footer
+@import 'share/_footer' 
+
+// 多層下拉選單
+@import 'share/_dropdown'
+
+// animation動畫
+@import 'share/_animation'
+
+// 控制物件與物件間的細節微調 
+@import 'share/_control'
+
+// /////////////////////// 物件
+// -----------------page number 01 / 02
+// 大學頁 表格
+// 系所頁 表格
+@import 'tun_list/_tunlist'
+
+// -----------------page number 03
+// 榜單頁 表格
+// 榜單頁 表格 標題
+@import 'detail_list/_detail_head'
+// 榜單頁 表格 ul外層 姓名號碼
+@import 'detail_list/_detail_list'
+// 榜單頁 表格 ul內層 學校
+@import 'detail_list/_detail_list_content'
+// 榜單頁 表格 ul內層 學校 list even btn hover 效果
+@import 'detail_list/_detail_list_ntdchild_even'
+
+// -----------------page number 04 / 07
+// 搜尋頁
+@import 'search/_search_from'
+
+// -----------------page number 05 / 08 / 13
+// 姓名搜尋 榜單頁
+// 應試號碼 榜單頁
+// 考區查詢 榜單頁
+// 需與 _detail_list & _detail_list_content 一起使用
+@import 'detail_list/_detail_list_search_node'
+
+// -----------------page number 06 / 09
+// 姓名搜尋 無結果頁
+@import 'search/_search_result'
+
+// -----------------page number 10
+// 台灣地圖
+@import 'taiwan_map/_taiwan_map'
+
+// -----------------page number 11
+// 考區查榜 區域查詢
+@import 'area_list/_area_list'
+
+// -----------------page number 12
+// 考區查榜 依試場查詢
+// 需與 _area_list/_area_list' 一起使用
+@import 'area_list/_area_classroom'
+
+// -----------------page number 14
+// 新鮮人懶人包
+@import 'freshman_gift/_freshman_share'
+@import 'freshman_gift/_freshmanSect'
+// swiper
+@import 'freshman_gift/_freshman_swiper'
+// 會員區
+@import 'freshman_gift/_freshman_memberSect'
+// part time 區
+@import 'freshman_gift/_parttimeSect'
+
+
+// -----------------page number 03
+// 推廣區
+@import 'sect/_promoteSect'
+
+// -----------------page number 15
+// 統測
+@import 'group_class/_vtech'

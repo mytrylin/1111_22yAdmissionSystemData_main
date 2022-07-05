@@ -1,0 +1,54 @@
+// // page 15 16
+.tunlistSect.vtech
+    // 欄位表頭
+    .tunlist__headBox
+        .tunlist
+            &__head-list
+                background: $vtech_color_second
+    // 欄位內容
+    .tunlist__contentBox
+        .tunlist
+            &__list
+                background: $vtech_color_bg
+                @include smScreen
+                    background: unset
+                    &:nth-child(even)
+                        background: $vtech_color_bg
+                        @include lgScreen
+                            background: unset
+                &:hover
+                    @include lgScreen
+                        background: $vtech_color_bg
+            &__btn
+                background: $vtech_color_main
+                &:hover
+                    color: $vtech_color_main
+                    background: $color_white
+
+// page 17
+.tunlistSect.vtech
+    .detail__headBox
+        .detail
+            &__head-list
+                background: $vtech_color_second
+    .detail__contentBox
+        .detail
+            &__list
+                background: $vtech_color_bg
+                @include smScreen
+                    background: unset
+                    &:nth-child(even)
+                        background: $vtech_color_bg
+
+                &:nth-child(odd)  
+                    .detail
+                        &__school
+                            &-list
+                                &:hover
+                                    @include mdScreen
+                                        background: $vtech_color_bg
+                .detail__school-list
+                    &:not(:last-child)
+                        border-bottom: 1px solid $vtech_color_bg
+                        @include smScreen
+                            border-bottom: unset

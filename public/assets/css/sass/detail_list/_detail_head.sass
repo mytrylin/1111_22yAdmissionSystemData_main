@@ -1,0 +1,135 @@
+// 表單區＿＿head
+.detail
+    &__headBox
+        display: none
+        @include smScreen
+            display: block
+            
+            padding-right: 30px
+            padding-left: 30px
+            font-size: 18px
+            color: $color_white
+            width: 100%
+            margin-top: 35px
+        @include xxlScreen
+            padding-right: 0
+            padding-left: 0 
+    &__head   
+        &-container
+            margin: 0 auto
+            width: 100%
+            max-width: 1140px
+            justify-content: center
+            +default_animation
+            @include smScreen
+                list-style: none
+            @include lgScreen
+                display: flex
+        &-list
+            width: 100%
+            +default_animation
+            @include smScreen
+                display: flex 
+                background: $color_sys_second
+                padding: 13px 15px 13px 20px
+                border-radius: 4px
+                // margin: 0 2px
+                font-size: 18px
+        &-top
+            @include smScreen
+                display: flex
+                justify-content: center
+                width: 185px
+                flex-grow: 0
+                flex-shrink: 0
+                @include smScreen
+                    width: 40%
+                    padding: 0
+                @include mdScreen
+                    width: 30%
+                @include lgScreen
+                    width: 25%
+                span
+                    flex-grow: 0
+                    flex-shrink: 0
+            &-beforeGroup,
+            &-afterGroup
+                font-size: 18px
+                font-weight: $font_weight_400
+                display: flex
+                align-items: center
+                justify-content: center
+                line-height: 22px
+                flex-direction: column
+                @include lgScreen
+                    flex-direction: row
+            &-beforeGroup
+                width: 70px
+                flex-grow: 0
+                flex-shrink: 0
+                @include lgScreen
+                    // width: 40%
+                    justify-content: flex-start
+            &-afterGroup
+                width: 100%
+                @include smScreen
+                    margin-left: 10px
+                @include mdScreen
+                    margin-left: 0
+                @include lgScreen
+                    span
+                        &:not(:first-child)
+                            margin-left: 5px
+                            &::before
+                                margin-right: 5px
+                                content: '/'        
+        &-bottom
+            width: 100%
+            display: flex
+            justify-content: flex-end
+            @include smScreen
+                background: unset
+                width: 60%
+            @include mdScreen
+                width: 70%
+            @include lgScreen
+                width: 75%
+            b
+                width: 100%
+                font-size: 18px
+                font-weight: $font_weight_400
+                line-height: 22px
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                span
+                    flex-grow: 0
+                    flex-shrink: 0
+                    display: block
+                @include lgScreen
+                    flex-direction: row
+                &:nth-child(1)
+                    width: 100%
+                    margin-left: 10px
+                    display: flex
+                    align-items: flex-start
+                    @include lgScreen
+                        align-items: center
+                        justify-content: flex-start
+                
+                &:nth-child(2)
+                    width: 30px
+                    margin: 0 10px
+                    flex-grow: 0
+                    flex-shrink: 0
+                    text-align: center
+                    @include lgScreen
+                        width: 15%
+                        margin: 0
+                &:nth-child(3)
+                    width: 70px
+                    flex-grow: 0
+                    flex-shrink: 0
+                    // @include lgScreen
+                    //     width: 15%
