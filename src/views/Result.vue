@@ -176,6 +176,7 @@ export default defineComponent({
     // 分頁組件傳遞按鈕
     async function  changePageBtn(nowPage){
       await useData.fetchData(nowPage.value, getQuery(route.query).query);
+      window.scrollTo(0, 0);
     }
 
 

@@ -36,6 +36,36 @@
           <p v-if="nowSchoolCode === '001' && nowYears === '111'" class="mt-3">備註：111年度國立臺灣大學榜單，係以考生之「報名編號」呈現</p>
         </article>
     </section>
+    <div class="deptcodeSect">
+        <article class="titleBox">
+            <h2>統測學群代碼說明</h2>
+            <p class="title__default">「系名」欄位中的各學系後方有代碼，該代碼即為統測的學群</p>
+            <div class="container">
+              <ul class="deptcode__group">
+                <li class="deptcode__group-item"><span class="deptcode__badge">01</span>機械群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">02</span>動力機械群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">03</span>電機與電子群電機類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">04</span>電機與電子群資電類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">05</span>化工群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">06</span>土木與建築群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">07</span>設計群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">08</span>工程與管理類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">09</span>商業與管理群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">10</span>衛生與護理類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">11</span>食品群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">12</span>家政群幼保類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">13</span>家政群生活應用類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">14</span>農業群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">15</span>外語群英語類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">16</span>外語群日語類</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">17</span>餐旅群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">18</span>海事群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">19</span>水產群</li>
+                <li class="deptcode__group-item"><span class="deptcode__badge">20</span>藝術群影視類</li>
+              </ul>
+            </div>
+        </article>
+    </div>
   </div>
 </template>
 
