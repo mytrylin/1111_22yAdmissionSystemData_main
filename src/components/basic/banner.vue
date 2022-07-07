@@ -1,12 +1,12 @@
 <template>
     <section class="titleSect">
-        <h1>
+        <h2>
             <picture>
                 <source media="(min-width:1400px)" :srcset="imgRouter.pcImg">
                 <source media="(min-width:576px)" :srcset="imgRouter.mdImg">
-                  <img :src="imgRouter.mImg" :alt="imgRouter.alt">
+                  <img :src="imgRouter.mImg" alt="2022大學與統測放榜交叉查詢，掌握第一手放榜資訊" :title="imgRouter.alt">
             </picture>
-        </h1>
+        </h2>
     </section>
 </template>
     

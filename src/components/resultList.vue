@@ -11,8 +11,8 @@
       <span>{{ Titem.schoolName }}</span>{{ Titem.educationName }}
     </h3>
   </router-link>
-  <button @click="educationBtn" v-if="Titem.TUNsid === '' && Titem.TUNeducationCode === '' " class="detail__school-btn"><img src="@/assets/img/main/icon_info.svg" :alt="Titem.schoolName + Titem.educationName"></button>
-  <a v-else class="detail__school-btn" target="_blank" :href="'https://university.1111.com.tw/company.asp?sid='+ Titem.TUNsid +'&codeNo=' + Titem.TUNeducationCode"><img src="@/assets/img/main/icon_info.svg" :alt="Titem.schoolName + Titem.educationName"></a>
+  <button @click="educationBtn" v-if="Titem.TUNsid === '' && Titem.TUNeducationCode === '' " class="detail__school-btn"><img src="@/assets/img/main/icon_info.svg" :alt="Titem.schoolName + Titem.educationName" :title="Titem.schoolName + Titem.educationName"></button>
+  <a v-else class="detail__school-btn" target="_blank" :href="'https://university.1111.com.tw/company.asp?sid='+ Titem.TUNsid +'&codeNo=' + Titem.TUNeducationCode"><img src="@/assets/img/main/icon_info.svg" :alt="Titem.schoolName + Titem.educationName" :title="Titem.schoolName + Titem.educationName"></a>
   <div class="detail__status">
     <span :class="Titem.type == '正取' ? 'detail__admission' : 'detail__alternate'">
       <template v-if="Titem.orderBy !== '0' && Titem.studentType == ''">

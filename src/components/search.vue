@@ -1,7 +1,7 @@
 <template>
     <div class="searchBox" :id="item.type" ref="type">
         <div class="search__container">
-            <h3 class="search__title">【{{item.school}}】{{nowTypeInquire}}查榜</h3>
+            <h2 class="search__title">【{{item.school}}】{{nowTypeInquire}}查榜</h2>
             <div class="search__group">
                 <input class="search__input" type="text" :placeholder="`請輸入${nowTypeInquire}`" @keyup.enter="handleProps" v-model="searchInput">
                 <button class="search__btn" @click="handleProps">搜尋</button>

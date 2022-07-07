@@ -4,7 +4,7 @@
     <section class="tunlistSect tunlistSect_inner" :class="{ vtech : orderbyQueryShow }">
       <!-- title -->
       <article class="titleBox">
-        <h2><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h2>
+        <h1><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h1>
         <h3><span  class="title__id">{{ nowSchoolCode }}</span>{{ nowSchoolName }}</h3>
       </article>
       <!-- back btn -->
@@ -36,7 +36,7 @@
           <p v-if="nowSchoolCode === '001' && nowYears === '111'" class="mt-3">備註：111年度國立臺灣大學榜單，係以考生之「報名編號」呈現</p>
         </article>
     </section>
-    <div class="deptcodeSect">
+    <div v-if="orderbyQueryShow" class="deptcodeSect">
         <article class="titleBox">
             <h2>統測學群代碼說明</h2>
             <p class="title__default">「系名」欄位中的各學系後方有代碼，該代碼即為統測的學群</p>
@@ -79,6 +79,7 @@
   import back from '@/components/back.vue';
   import headBox from '@/components/headBox.vue';
   import banner from '@/components/basic/banner.vue';
+
   export default {
     components: {
       back,
@@ -134,6 +135,9 @@
 
       const examType =  route.query.examType;
 
+      // footer 樣式調整用
+      document.getElementsByTagName('body')[0].className = (orderbyQueryShow)? 'examType2-body' : '';
+
       return {
         showWidth,
         domain,
@@ -159,3 +163,6 @@
     }
   }
 </script>
+<style>
+.examType2-body  footer{margin-top: 0; border-top: 1px solid #fff;}
+</style>

@@ -4,7 +4,7 @@
     <section class="tunlistSect tunlistSect_inner" :class="{ vtech : orderbyQueryShow }">
       <!-- title -->
       <div class="titleBox">
-        <h2><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h2>
+        <h1><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h1>
         <p  class="title__default"  v-if="detaPercentage">第二階段 {{ percent }}已放榜<span>（{{ educationListed }}／{{ educationSum }}）</span></p>
       </div>
         <!-- list head -->

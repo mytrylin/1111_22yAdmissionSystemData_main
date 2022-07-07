@@ -4,8 +4,8 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
                 <div class="navbar_content">
-                   <router-link class="navbar_logo"  to="/" >
-                      <img src="@/assets/img/main/logo.svg" alt="1111放榜服務提供給您最即時的放榜資訊，網羅全台灣大學榜單與四技榜單，掌握第一手各校系" srcset="">       
+                   <router-link class="navbar_logo"  to="/" title="查榜服務">
+                      <img src="@/assets/img/main/logo.svg" alt="1111放榜服務提供給您最即時的放榜資訊，網羅全台灣大學榜單與四技榜單，掌握第一手各校系" title="查榜服務" srcset="">       
                     </router-link>
                     <button class="navbar-toggler" type="button" @click="show = !show" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -14,9 +14,9 @@
                 <div v-if="show" class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">                
                         <li class="nav-item dropdown" v-for="item in header" :key="item.id">
-                            <a class="nav-link dropdown-toggle" :class="{new_link : item.id == 2}" :href="item.url" :id="`navbarDropdown_${item.id}`" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" title="最新榜單" :class="{new_link : item.id == 2}" :href="item.url" :id="`navbarDropdown_${item.id}`" role="button" data-toggle="dropdown" aria-expanded="false">
                                 {{item.title}}
-                                <img v-if="item.id == 2" src="assets/img/main/icon_menu_new.svg">
+                                <img v-if="item.id == 2" src="assets/img/main/icon_menu_new.svg" alt="111年統測最新榜單" title="111年統測最新榜單">
                             </a>
                             <div class="dropdown-menu"  :aria-labelledby="`navbarDropdown_${item.id}`">
                                 <router-link v-for="itemChild in item.child" :key="item.id" class="dropdown-item" @click="widthFn"  :to="itemChild.url" >

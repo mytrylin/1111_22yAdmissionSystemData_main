@@ -225,7 +225,7 @@ body {
   padding: 0 15px;
 }
 
-.titleBox h2 {
+.titleBox h1, .titleBox h2 {
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,24 +242,24 @@ body {
 }
 
 @media (min-width: 768px) {
-  .titleBox h2 {
+  .titleBox h1, .titleBox h2 {
     font-size: 32px;
   }
 }
 
-.titleBox h2 b {
+.titleBox h1 b, .titleBox h2 b {
   width: 100%;
   font-size: 36px;
 }
 
 @media (min-width: 768px) {
-  .titleBox h2 b {
+  .titleBox h1 b, .titleBox h2 b {
     font-weight: 700;
     font-size: 52px;
   }
 }
 
-.titleBox h2 span {
+.titleBox h1 span, .titleBox h2 span {
   margin-left: 6px;
   font-size: 24px;
   font-weight: 700;
@@ -267,19 +267,19 @@ body {
 }
 
 @media (min-width: 768px) {
-  .titleBox h2 span {
+  .titleBox h1 span, .titleBox h2 span {
     margin-left: 10px;
     font-size: 24px;
   }
 }
 
 @media (min-width: 768px) {
-  .titleBox h2 span {
+  .titleBox h1 span, .titleBox h2 span {
     font-size: 32px;
   }
 }
 
-.titleBox h2::after {
+.titleBox h1::after, .titleBox h2::after {
   position: absolute;
   content: '';
   display: block;
@@ -292,23 +292,23 @@ body {
           transform: translateX(-50%);
 }
 
-.titleBox h2 + p {
+.titleBox h1 + p, .titleBox h2 + p {
   font-size: 18px;
   color: #7f7f7f;
 }
 
 @media (min-width: 768px) {
-  .titleBox h2 + p {
+  .titleBox h1 + p, .titleBox h2 + p {
     font-size: 22px;
   }
 }
 
-.titleBox h2 + p span {
+.titleBox h1 + p span, .titleBox h2 + p span {
   display: block;
 }
 
 @media (min-width: 425px) {
-  .titleBox h2 + p span {
+  .titleBox h1 + p span, .titleBox h2 + p span {
     display: inline-block;
   }
 }

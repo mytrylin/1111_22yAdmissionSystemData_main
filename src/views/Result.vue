@@ -7,7 +7,7 @@
       <template v-if="nowEducationCode !== undefined">
         <!-- title -->
         <article class="titleBox">
-          <h2><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h2>
+          <h1><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h1>
           <h3>
             <span  class="title__id">{{ nowEducationCode }}</span>
             <router-link  class="title__school" :to="`/education?type=${userTypeSchool}&years=${nowYears}&schoolCode=${nowSchoolCode}&examType=${examTypeHome}`">{{ nowSchoolName }}</router-link>
@@ -53,9 +53,9 @@
       <template v-else>
         <!-- title -->
         <article class="titleBox">
-          <h2>
+          <h1>
             <b>{{ nowYears }}年</b>{{ typeRefName}}<span>{{ nowTypeInquire }}查榜</span>
-          </h2>
+          </h1>
           <p class="title__default">搜尋結果</p>
           <p class="title__search">
             <b v-if="nowTicketNum !== undefined" class="title__txt">{{nowTicketNum}}</b>
@@ -99,7 +99,7 @@
     </template>
     <!-- parttime -->
     <template v-if="!check_nowEducationCode && !check_total_info">
-      <parttime :schoolcode_sc="data[0].total_info[0].schoolcode_sc"/>
+      <parttime :schoolcode_sc="data[0].total_info[0].schoolcode_sc" :nowEducationName="nowEducationName" :nowSchoolName="nowSchoolName"/>
     </template>
   </div>
 </template>

@@ -5,7 +5,7 @@
       <!-- title -->
       <article class="titleBox">
         <!--  -->
-        <h2><b>{{years}}年</b>大學/四技<span>{{seachTypeName}}查榜</span></h2>
+        <h1><b>{{years}}年</b>大學/四技<span>{{seachTypeName}}查榜</span></h1>
       </article>
       <!-- list head --> 
       <template  v-for="item in bachelorSearch" :key='item'>
