@@ -83,7 +83,8 @@
   export default {
     components: {
       back,
-      headBox
+      headBox,
+      banner
     },
     props: {
         num: {

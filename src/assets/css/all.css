@@ -4205,7 +4205,7 @@ svg.defs-only {
 }
 
 .parttimeSect {
-  background: #72cbbe;
+  background: #6fcabd;
   padding: 55px 0 40px;
 }
 
@@ -4218,7 +4218,7 @@ svg.defs-only {
   margin-top: 30px;
   padding-top: 20px;
   margin-bottom: 12px;
-  color: #fff;
+  color: #ffffff;
   border-top: 1px solid #bce0db;
 }
 
@@ -4258,7 +4258,7 @@ svg.defs-only {
 }
 
 .parttime__text-work h4 {
-  color: #333;
+  color: #333333;
   font-size: 16px;
   display: block;
   width: 100%;
@@ -4269,7 +4269,7 @@ svg.defs-only {
 
 .parttime__text-work span {
   font-size: 13px;
-  color: #72cbbe;
+  color: #6fcabd;
   padding-top: 3px;
   display: block;
   width: 100%;
@@ -4332,6 +4332,70 @@ svg.defs-only {
   border: 2px solid #fff45c;
   margin: 0 auto;
   display: block;
+}
+
+.remid__section {
+  margin-top: 20px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.remid__card {
+  position: relative;
+  padding: 11px 15px 15px;
+  max-width: 508px;
+  background: #fddddd;
+  border-radius: 4px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+@media (min-width: 576px) {
+  .remid__card {
+    padding: 21px 40px 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .remid__card {
+    padding: 21px 40px 25px;
+  }
+}
+
+.remid__card::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 12px solid;
+  border-color: transparent transparent #fddddd transparent;
+  top: -22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scaleX(0.6);
+          transform: translateX(-50%) scaleX(0.6);
+}
+
+.remid__card p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #6d6d6d;
+}
+
+.remid__card p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.span_remid {
+  padding: 0 5px 2px;
+  background: #fff45c;
+  border-radius: 4px;
 }
 
 .promoteSect {

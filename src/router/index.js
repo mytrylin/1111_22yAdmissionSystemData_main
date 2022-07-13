@@ -52,6 +52,11 @@ const router = createRouter ({
       name: 'Freshman',
       component: () => import('../views/Freshman.vue'),
     },
+    {
+      path: '/:catchAll(.*)',
+      name: '404',
+      redirect:'/?type=2&years=111&examType=2'
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, reject) => {

@@ -1,9 +1,9 @@
 <template>
    <div class="swiper__contentBox" >
-        <div class="swiper-button-next"  :class="next" @click="swiper.slideNext()">
+        <div class="swiper-button-next"  :class="next">
             <slot name="next"></slot>
         </div>
-        <div class="swiper-button-prev" :class="prev" @click="swiper.slidePrev()">
+        <div class="swiper-button-prev" :class="prev">
             <slot name="prev"></slot>
         </div>
         <Swiper 

@@ -1,0 +1,40 @@
+.remid
+    &__section
+        margin-top: 20px
+        padding: 0 15px
+        display: flex
+        justify-content: center
+        +default_animation
+
+    &__card
+        position: relative
+        padding: 11px 15px 15px 
+        max-width: 508px
+        background: $color_red_light
+        border-radius: 4px
+        +default_animation
+        @include smScreen
+            padding: 21px 40px 25px
+        @include mdScreen
+            padding: 21px 40px 25px
+        &::before
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border: 12px solid
+            border-color: transparent transparent $color_red_light transparent
+            top: -22px
+            left: 50%
+            transform: translateX(-50%) scaleX(.6)
+        p
+            font-size: 18px
+            line-height: 30px
+            color: $color_text_gray_dark
+            &:not(:last-child)
+                margin-bottom: 15px
+                
+.span_remid
+    padding: 0 5px 2px
+    background: $fresh_btn_yellow
+    border-radius: 4px

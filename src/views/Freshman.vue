@@ -27,7 +27,12 @@
                   <div class="form-group row">
                       <button type="submit" class="freshman__btn" @click="submit">搜尋</button>
                   </div>
-
+                  <div class="remid__section">
+                    <div class="remid__card">
+                        <p>恭喜您！即將踏入人生中下一個階段，只要輸入應試號碼即可<span class="span_remid">獲得1111人力銀行所整理的新手禮包</span></p>
+                        <p>探索錄取學校附近的工作機會，了解錄取學系的畢業出路，入學前就領先同儕一大步！</p>
+                    </div>
+                </div>
             </div>
         </section>
          <!-- work Swiper -->
