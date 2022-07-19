@@ -1,5 +1,6 @@
 import { getDatas, getLists, userStudentTypes, useAlertSchoolOpens } from '@/composition-api/index.js';
 import { defineStore } from 'pinia'
+import { watch } from 'vue';
 import _ from "lodash"
 export const usedataStore = defineStore({
   id: 'data',
@@ -27,8 +28,18 @@ export const usedataStore = defineStore({
 
           let studentType = ''
           const { studentChoose} = userStudentTypes();
+          
+          if(query.examType == 2){
+            console.log(1);
+          }else if (typeof query === 'string'){
+            let queryExamTypeSplit = query.split('&');
+            queryExamTypeSplit.forEach(element => {
+              element == 'examType=2' ? studentChoose[5].show = '外加' : '';
+            });
+            console.log(2, query);
+          }
 
-          query.type == 2 ? studentChoose[5].show = '外加' : '';
+          query.examType == 2 ? studentChoose[5].show = '外加' : '';
 
           studentChoose.forEach(Mitem => {
             if(Mitem.value == item.studentType) studentType = Mitem.show

@@ -97,7 +97,7 @@ export function useVueMeta() {
             potentialAction: {
               "@type": "SearchAction",
               target:
-                "https://event.1111.com.tw/event22/22yAdmissionSystem/result?years=111&typeRef=1&schoolType=1&seachType=2&ticketNum={search_term_string}",
+                "https://event.1111.com.tw/event22/22yAdmissionSystem/result?years=111&typeRef=1&schoolType=1&searchType=2&ticketNum={search_term_string}",
               "query-input": "required name=search_term_string",
             },
           },
@@ -159,8 +159,8 @@ export function changeMeta() {
     immediate: true
   })
 
-  watch(route.query.seachType, () => {
-    switch (route.query.seachType) {
+  watch(route.query.searchType, () => {
+    switch (route.query.searchType) {
       case 1:
       case '1':
         console.log('route.fullPath', route.fullPath)
@@ -239,7 +239,7 @@ export function changeMeta() {
                 potentialAction: {
                   "@type": "SearchAction",
                   target:
-                    "https://event.1111.com.tw/event22/22yAdmissionSystem/result?years=111&typeRef=1&schoolType=1&seachType=2&ticketNum={search_term_string}",
+                    "https://event.1111.com.tw/event22/22yAdmissionSystem/result?years=111&typeRef=1&schoolType=1&searchType=2&ticketNum={search_term_string}",
                   "query-input": "required name=search_term_string",
                 },
               },

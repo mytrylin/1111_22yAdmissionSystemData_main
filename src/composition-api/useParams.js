@@ -17,7 +17,7 @@ export function useParam() {
   const typeRefName =  ref('')
 
   // seo  資料 改 router 調用
-  // const SEOTitle = route.query.seachType == 1 ? "111年度大學及四技姓名查榜︱入學榜單查詢-1111人力銀行" : route.query.seachType == 2 ? "111年度大學及四技應試號碼查榜︱入學榜單查詢-1111人力銀行" : "111年度大學及四技查榜服務︱入學榜單查詢-1111人力銀行"
+  // const SEOTitle = route.query.searchType == 1 ? "111年度大學及四技姓名查榜︱入學榜單查詢-1111人力銀行" : route.query.searchType == 2 ? "111年度大學及四技應試號碼查榜︱入學榜單查詢-1111人力銀行" : "111年度大學及四技查榜服務︱入學榜單查詢-1111人力銀行"
   // const SEOKeywords = "大學放榜、大學申請入學、四技放榜、四技申請入學、放榜、姓名查榜、應試碼查榜"
   // const SEODescription = "111年度年度(2022)學測、統測、指考放榜交叉查詢，可依姓名、應試碼、考區等不同查榜功能，快速查詢錄取結果！"
   // const SEOImg = "https://event.1111.com.tw/event22/22yAdmissionSystem/assets/img/og.jpg"
@@ -26,7 +26,7 @@ export function useParam() {
 
   nowType.value = route.query.type || route.query.nowType || 1
   nowTypeCN.value = route.query.examType == '2' ? '統測甄選' : '大學';
-  nowTypeInquire.value = route.query.seachType == '1' ? '姓名' : '應試號碼';
+  nowTypeInquire.value = route.query.searchType == '1' ? '姓名' : '應試號碼';
   nowYears.value = route.query.years || 111
   nowSchoolCode.value = route.query.schoolCode
   nowEducationCode.value = route.query.educationCode

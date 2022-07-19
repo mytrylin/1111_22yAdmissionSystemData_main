@@ -10,13 +10,13 @@
           <h1><b>{{ nowYears }}年</b>{{ nowTypeCN }}個人申請入學校系查榜</h1>
           <h3>
             <span  class="title__id">{{ nowEducationCode }}</span>
-            <router-link  class="title__school" :to="`/education?type=${userTypeSchool}&years=${nowYears}&schoolCode=${nowSchoolCode}&examType=${examTypeHome}`">{{ nowSchoolName }}</router-link>
+            <router-link   class="title__school" v-bind="$attrs" :to="`/education?type=${userTypeSchool}&years=${nowYears}&schoolCode=${nowSchoolCode}&examType=${examTypeHome}`">{{ nowSchoolName }}</router-link>
             <span  class="title__department">{{ nowEducationName }}</span>
           </h3>
           <p class="title__default">招收名額：<span>{{ quotaTotal }}人</span></p>
         </article>
         <!-- back btn -->
-        <back :className="'headBox__mt-change'" :link="`/education?type=${userTypeSchool}&years=${nowYears}&schoolCode=${nowSchoolCode}&examType=${examTypeHome}`" :btnName="`返回學系查詢`"/>
+        <back :className="'headBox__mt-change'" v-bind="$attrs" :link="`/education?type=${userTypeSchool}&years=${nowYears}&schoolCode=${nowSchoolCode}&examType=${examTypeHome}`" :btnName="`返回學系查詢`"/>
         <template v-if="!noInformation">
           <resultContent
             :data="data"
@@ -68,7 +68,7 @@
           </p>
         </article>
         <!-- back btn -->
-        <back :className="'headBox__mt-change'" :link="`/inquire?years=${nowYears}&seachType=${nowTypeInquire === '姓名' ? 1 : 2}`" :btnName="`返回${nowTypeInquire}查詢`"/>
+        <back :className="'headBox__mt-change'" :link="`/inquire?years=${nowYears}&searchType=${nowTypeInquire === '姓名' ? 1 : 2}`" :btnName="`返回${nowTypeInquire}查詢`"/>
         <template v-if="!noInformation">
           <resultContent
             :data="data"
@@ -217,7 +217,7 @@ export default defineComponent({
       data,
       totalpage,
       totalrecord,
-      // seachType,
+      // searchType,
       isLoadings,
       noInformation,
       nowYears,

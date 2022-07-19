@@ -121,7 +121,7 @@ export default {
             let examType = ticketNumCheckExamType(ticketNum_slowly.value)
             if(option_slowy.value==1) {
                 ticketNumData.value = 
-                await getFreshmanData(`years=111&typeRef=${examType}&schoolType=1&seachType=2&distinctName=1&examType=${examType}&pageshow=1&page=1&ticketNum=${ticketNum_slowly.value}`)
+                await getFreshmanData(`years=111&typeRef=${examType}&schoolType=1&searchType=2&distinctName=1&examType=${examType}&pageshow=1&page=1&ticketNum=${ticketNum_slowly.value}`)
 
                 if(ticketNumData.value) {
                     freshmanSchool.value = filterticketNumData(ticketNumData.value)

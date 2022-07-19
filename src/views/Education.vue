@@ -27,7 +27,7 @@
                 </div>
               </div>
               <div class="tunlist__bottom">
-                <router-link :to="'/result?type='+userTypeSchool+'&years=' + nowYears + '&orderby=1&schoolType=' + nowType + '&schoolCode=' + nowSchoolCode  + '&educationCode=' + item.educationCode + '&examType=' + examType">
+                <router-link  v-bind="$attrs" :to="'/result?type='+userTypeSchool+'&years=' + nowYears + '&orderby=1&schoolType=' + nowType + '&schoolCode=' + nowSchoolCode  + '&educationCode=' + item.educationCode + '&examType=' + examType">
                   <button class="tunlist__btn">查詢</button>
                 </router-link>
               </div>

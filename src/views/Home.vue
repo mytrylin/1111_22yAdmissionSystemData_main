@@ -35,7 +35,7 @@
                 </div>
               </div>
               <div class="tunlist__bottom">
-                <button class="tunlist__btn" @click="schoolCodeFn(`${item.schoolCode}`)">查詢</button>
+                <button  v-bind="$attrs" class="tunlist__btn" @click="schoolCodeFn(`${item.schoolCode}`)">查詢</button>
               </div>
             </li>
           </ul>

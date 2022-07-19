@@ -5,7 +5,7 @@
       <!-- title -->
       <article class="titleBox">
         <!--  -->
-        <h1><b>{{years}}年</b>大學/四技<span>{{seachTypeName}}查榜</span></h1>
+        <h1><b>{{years}}年</b>大學/四技<span>{{searchTypeName}}查榜</span></h1>
       </article>
       <!-- list head --> 
       <template  v-for="item in bachelorSearch" :key='item'>
@@ -44,11 +44,11 @@ export default {
     isLoadings.value = false
     isLoading.value = false
     
-    const seachType = ref(route.query.seachType);
+    const searchType = ref(route.query.searchType);
 
 
-    const seachTypeName = computed(() => {
-      return (seachType.value == 1) ? name = '姓名' : name = '應試號碼';
+    const searchTypeName = computed(() => {
+      return (searchType.value == 1) ? name = '姓名' : name = '應試號碼';
     });
     const useParameter = useUserParameter();
     const { queryName, ticketInput } = storeToRefs(useParameter);
@@ -97,8 +97,8 @@ export default {
       typeRef.value === '2' ? examTypeRouter.value = 2 :  examTypeRouter.value = 1;
       
       (typeRef.value === '1') ? schoolType.value = '大學' : schoolType.value = '統測甄選';
-      goToCourses(type, years.value, 1, seachType.value, examTypeRouter.value)
-      // goToCourses(type, years.value, 1, seachType.value, route.query.examType)
+      goToCourses(type, years.value, 1, searchType.value, examTypeRouter.value)
+      // goToCourses(type, years.value, 1, searchType.value, route.query.examType)
     };
     
 
@@ -109,7 +109,7 @@ export default {
     const verification = (ticketNum) => {
       ticketInput.value = ticketNum
       var category = '';
-       const seach = ref(route.query.seachType);
+       const seach = ref(route.query.searchType);
       (seach.value == 1) ? category = `&name=${ticketNum}` :  category =  `&ticketNum=${ticketNum}`;
       return category;
     };
@@ -120,11 +120,11 @@ export default {
       * @param {typeRef} a - 抓取 大學  or 四技 搜尋框 (自訂)
       * @param {years} a - 年分
       * @param {schoolType} a - 大學  or 四技
-      * @param {seachType} a - 姓名 or 應試碼 
+      * @param {searchType} a - 姓名 or 應試碼 
     */
-    const goToCourses = (typeRef, years, schoolType,seachType, examType) => {
+    const goToCourses = (typeRef, years, schoolType,searchType, examType) => {
       var ticket = verification(searchInput.value);
-      router.push(`/result?years=${years}&typeRef=${typeRef}&schoolType=${schoolType}&seachType=${seachType}${ticket}&distinctName=1&examType=${examType}`);
+      router.push(`/result?years=${years}&typeRef=${typeRef}&schoolType=${schoolType}&searchType=${searchType}${ticket}&distinctName=1&examType=${examType}`);
     };
     
     return{
@@ -134,8 +134,8 @@ export default {
       bachelor,
       setNun,
       typeRef,
-      seachType,
-      seachTypeName,
+      searchType,
+      searchTypeName,
       bachelorSearch
     }
   }

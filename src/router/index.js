@@ -33,7 +33,7 @@ const router = createRouter ({
       path: '/inquire',
       name: 'Inquire',
       component: () => import('../views/Inquire.vue'),
-      props: route => ({years: route.query.years, seachType: route.query.seachType, examType: route.query.examType}),
+      props: route => ({years: route.query.years, searchType: route.query.searchType, examType: route.query.examType}),
       meta: {
         title: '111年度大學及四技查榜服務︱入學榜單查詢-1111人力銀行'
       }
@@ -68,8 +68,8 @@ const router = createRouter ({
 })
 
 router.beforeEach((to, from, next) => {
-  const title = to.query.seachType == 1 ? "111年度大學及四技姓名查榜︱入學榜單查詢-1111人力銀行" : to.query.seachType == 2 ? "111年度大學及四技應試號碼查榜︱入學榜單查詢-1111人力銀行" : "111年度大學及四技查榜服務︱入學榜單查詢-1111人力銀行"
-  const keywords = to.query.seachType == 1 ? "姓名查榜、大學放榜、大學申請入學、四技放榜、四技申請入學、放榜" : to.query.seachType == 2 ? "應試號碼查榜、大學放榜、大學申請入學、四技放榜、四技申請入學、放榜" : "大學放榜、大學申請入學、四技放榜、四技申請入學、放榜、姓名查榜、應試碼查榜"
+  const title = to.query.searchType == 1 ? "111年度大學及四技姓名查榜︱入學榜單查詢-1111人力銀行" : to.query.searchType == 2 ? "111年度大學及四技應試號碼查榜︱入學榜單查詢-1111人力銀行" : "111年度大學及四技查榜服務︱入學榜單查詢-1111人力銀行"
+  const keywords = to.query.searchType == 1 ? "姓名查榜、大學放榜、大學申請入學、四技放榜、四技申請入學、放榜" : to.query.searchType == 2 ? "應試號碼查榜、大學放榜、大學申請入學、四技放榜、四技申請入學、放榜" : "大學放榜、大學申請入學、四技放榜、四技申請入學、放榜、姓名查榜、應試碼查榜"
   const url = 'https://www.1111.com.tw' + to.href
   document.title = title;
   document.querySelector('meta[name="title"]') ? document.querySelector('meta[name="title"]').content = title : ''

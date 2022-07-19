@@ -113,17 +113,17 @@ export default {
                   {
                     id: '31',
                     title: '111年查榜',
-                    url: '/inquire?years=111&seachType=1&examType=1'
+                    url: '/inquire?years=111&searchType=1&examType=1'
                   },
                   {
                     id: '32',
                     title: '110年查榜',
-                    url: '/inquire?years=110&seachType=1&examType=1'
+                    url: '/inquire?years=110&searchType=1&examType=1'
                   },
                   // {
                   //   id: '33',
                   //   title: '109年查榜',
-                  //   url: '/inquire?years=109&seachType=1'
+                  //   url: '/inquire?years=109&searchType=1'
                   // }
               ]
           },
@@ -134,17 +134,17 @@ export default {
                   {
                     id: '41',
                     title: '111年查榜',
-                    url: '/inquire?years=111&seachType=2&examType=1'
+                    url: '/inquire?years=111&searchType=2&examType=1'
                   },
                   {
                     id: '42',
                     title: '110年查榜',
-                    url: '/inquire?years=110&seachType=2&examType=1'
+                    url: '/inquire?years=110&searchType=2&examType=1'
                   },
                   // {
                   //   id: '43',
                   //   title: '109年查榜',
-                  //   url: '/inquire?years=109&seachType=2'
+                  //   url: '/inquire?years=109&searchType=2'
                   // }
               ]
           },
